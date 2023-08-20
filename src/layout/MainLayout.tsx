@@ -6,13 +6,19 @@ type PropsType ={
 const MainLayout = ({children}:PropsType) => {
   return (
     <>
-    <header></header>
-    <main className="max-w-[1440px]">
-{children}
-    </main>
-    <footer></footer>
+      <div className="w-full h-full bg-gray-100  flex flex-col items-center justify-between font-iran-sans ">
+        <header className="fixed top-0 w-full h-20 bg-white shadow-md flex items-center justify-center">
+          <div className="max-w-[1440px]">header</div>
+        </header>
+        <main className="max-w-[1440px] w-full flex-1 mt-20 p-8">
+          {children}
+        </main>
+        <footer className="w-full h-20 bg-white shadow-md border-t border-gray-300 flex items-center justify-center">
+          <div className="max-w-[1440px]">footer</div>
+        </footer>
+      </div>
     </>
-  )
+  );
 }
 
 export default MainLayout
