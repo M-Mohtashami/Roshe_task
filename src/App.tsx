@@ -1,13 +1,10 @@
-
-import Category from './components/Category';
 import MainLayout from './layout/MainLayout';
-import ProductCard from './components/ProductCard';
-import ArticleCard from './components/ArticleCard';
+import Home from './pages/Home';
 function App() {
   return (
     <>
       <MainLayout>
-        <Category
+        {/* <Category
           src="assets/images/skin.jpg"
           category="پوست"
           link="https://rosheh.com/product-category/skin/"
@@ -42,10 +39,11 @@ function App() {
             image: 'assets/images/article02.jpg',
             createdAt: new Date(),
           }}
-        />
+        /> */}
+        <Home />
       </MainLayout>
     </>
   );
 }
 
-export default App
+export default App;
