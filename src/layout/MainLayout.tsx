@@ -8,7 +8,7 @@ const MainLayout = ({ children }: PropsType) => {
   return (
     <>
       <div className="w-full h-full bg-gray-100  flex flex-col items-center justify-between font-iran-sans ">
-        <header className="fixed top-0 w-full p-5 bg-white shadow-md flex items-center justify-center">
+        <header className="fixed top-0 w-full p-5 bg-white shadow-md flex items-center justify-center z-50">
           <div className="max-w-[1440px] w-full">
             <Header />
           </div>
