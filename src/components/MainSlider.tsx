@@ -20,11 +20,11 @@ const MainSlider = () => {
         modules={[Navigation, Pagination, Autoplay]}
         slidesPerView={1}
         pagination={{ clickable: true }}
-        autoplay={{ delay: 3000 }}
+        autoplay={{ delay: 6000 }}
         loop={true}
         onSlideChange={() => console.log('slide change')}
         onSwiper={(swiper) => console.log(swiper)}
-        className="w-full"
+        className="w-full h-full"
       >
         {slides.map((slide) => {
           return (
