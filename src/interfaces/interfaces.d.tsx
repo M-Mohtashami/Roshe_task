@@ -6,3 +6,16 @@ type MenuItem = {
 type UseMenuOptions = {
   handleOpenCart: () => void;
 };
+
+type ProductDetail = {
+  price: number;
+  capacity: number;
+  count: number;
+};
+
+type ProductType = {
+  name: string;
+  description?: string;
+  images: string[];
+  details: ProductDetail[];
+};
