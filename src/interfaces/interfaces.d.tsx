@@ -2,3 +2,7 @@
 type MenuItem = {
   element: React.ReactElement;
 };
+
+type UseMenuOptions = {
+  handleOpenCart: () => void;
+};
