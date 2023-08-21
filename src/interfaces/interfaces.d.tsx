@@ -19,3 +19,12 @@ type ProductType = {
   images: string[];
   details: ProductDetail[];
 };
+
+type ArticleType = {
+  title: string;
+  author: string;
+  category: string;
+  comments: number;
+  createdAt: Date;
+  image: string;
+};

@@ -2,6 +2,7 @@
 import Category from './components/Category';
 import MainLayout from './layout/MainLayout';
 import ProductCard from './components/ProductCard';
+import ArticleCard from './components/ArticleCard';
 function App() {
   return (
     <>
@@ -30,6 +31,16 @@ function App() {
                 count: 0,
               },
             ],
+          }}
+        />
+        <ArticleCard
+          article={{
+            title: 'طراحی داخلی سبز',
+            author: 'امید',
+            category: 'مقیاس',
+            comments: 0,
+            image: 'assets/images/article02.jpg',
+            createdAt: new Date(),
           }}
         />
       </MainLayout>
