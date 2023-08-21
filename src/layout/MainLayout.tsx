@@ -13,7 +13,7 @@ const MainLayout = ({ children }: PropsType) => {
             <Header />
           </div>
         </header>
-        <main className="max-w-[1440px] w-full flex-1 mt-20 p-8">
+        <main className="max-w-[1440px] w-full flex-1 mt-20 py-6">
           {children}
         </main>
         <footer className="w-full h-20 bg-white shadow-md border-t border-gray-300 flex items-center justify-center">
