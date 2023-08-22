@@ -1,5 +1,6 @@
 import { ReactNode } from "react";
 import Header from './../components/Header';
+import Footer from '../components/Footer';
 
 type PropsType = {
   children: ReactNode;
@@ -16,8 +17,10 @@ const MainLayout = ({ children }: PropsType) => {
         <main className="max-w-[1440px] w-full flex-1 mt-20 py-6">
           {children}
         </main>
-        <footer className="w-full h-20 bg-white shadow-md border-t border-gray-300 flex items-center justify-center">
-          <div className="max-w-[1440px]">footer</div>
+        <footer className="w-full bg-[#303030] shadow-md border-t border-gray-300 flex items-center justify-center">
+          <div className="max-w-[1440px] w-full  p-8 ">
+            <Footer />
+          </div>
         </footer>
       </div>
     </>
