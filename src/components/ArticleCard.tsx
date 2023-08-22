@@ -7,8 +7,6 @@ type PropsType = {
   article: ArticleType;
 };
 const ArticleCard = ({ article }: PropsType) => {
-  console.log(article);
-
   return (
     <div className="relative max-w-xs group overflow-hidden">
       <img
