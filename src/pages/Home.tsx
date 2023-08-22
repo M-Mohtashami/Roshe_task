@@ -1,6 +1,7 @@
 import React from 'react';
 import MainSlider from '../components/MainSlider';
 import CategoriesSection from '../components/CategoriesSection';
+import ProductSection from '../components/ProductSection';
 
 const Home = () => {
   return (
@@ -9,6 +10,7 @@ const Home = () => {
         <MainSlider />
       </div>
       <CategoriesSection />
+      <ProductSection />
     </div>
   );
 };
