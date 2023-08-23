@@ -14,11 +14,18 @@ type ProductDetail = {
 };
 
 type ProductType = {
+  id?: string;
   name: string;
   description?: string;
   images: string[];
   details: ProductDetail[];
 };
+interface CartItemType extends ProductDetail {
+  id?: string;
+  name: string;
+  description?: string;
+  images: string[];
+}
 
 type ArticleType = {
   title: string;
@@ -27,4 +34,9 @@ type ArticleType = {
   comments: number;
   createdAt: Date;
   image: string;
+};
+
+type ActionType = {
+  type: 'add to cart' | 'remove from cart' | 'update cart';
+  payload: CartItemType;
 };

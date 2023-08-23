@@ -102,7 +102,7 @@ const socials: MenuItem[] = [
 
 const Footer = () => {
   return (
-    <div className="w-full flex flex-col items-center justify-between md:flex-row">
+    <div className="w-full flex flex-col items-center justify-between gap-10 md:flex-row">
       <div className="w-48">
         <img
           className="w-full h-full"

@@ -1,11 +1,13 @@
+import CartProvider from './context/CartContext';
 import MainLayout from './layout/MainLayout';
 import Home from './pages/Home';
 import Product from './pages/Product';
 function App() {
   return (
     <>
-      <MainLayout>
-        {
+      <CartProvider>
+        <MainLayout>
+          {/* {
           <Product
             product={{
               name: 'ادو پرفیوم زنانه دزیره رانسه',
@@ -27,9 +29,10 @@ function App() {
               ],
             }}
           />
-        }
-        {/*<Home />*/}
-      </MainLayout>
+        } */}
+          <Home />
+        </MainLayout>
+      </CartProvider>
     </>
   );
 }

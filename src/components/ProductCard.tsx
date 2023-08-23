@@ -3,14 +3,30 @@ import Button from './Button';
 import { AiOutlineHeart, AiOutlineClose } from 'react-icons/ai';
 import { BiShuffle } from 'react-icons/bi';
 import { BsCart2 } from 'react-icons/bs';
+import useCart from '../hooks/useCart';
 
 type PropsType = {
   product: ProductType;
 };
 const ProductCard = ({ product }: PropsType) => {
+  const [state, dispach] = useCart();
+  console.log(state);
+
   const [price, setPrice] = useState<number>();
   const [showDetails, setShowDetails] = useState(false);
   const quantity = product.details.filter((detail) => detail.count > 0);
+
+  const addToCart = () => {
+    const cartItem = {
+      id: product.id,
+      name: product.name,
+      description: product.description,
+      images: product.images,
+      ...(quantity.find((quant) => quant.price === price) || quantity[0]),
+      count: 1,
+    };
+    dispach({ type: 'add to cart', payload: cartItem });
+  };
   return (
     <div className="relative max-w-[250px] bg-white flex flex-col items-center justify-between group">
       <div className="relative w-full h-60 overflow-hidden flex flex-col items-center ">
@@ -70,7 +86,7 @@ const ProductCard = ({ product }: PropsType) => {
             )}
           </div>
 
-          <Button>
+          <Button onClick={addToCart}>
             <div className="w-full p-2 text-white bg-[#5F754D] flex items-center justify-center gap-3 ">
               <BsCart2 size={24} className=" text-white" />
               {' خرید'}

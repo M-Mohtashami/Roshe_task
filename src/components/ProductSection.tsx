@@ -29,6 +29,7 @@ export const swiperParams = {
 
 export const products = [
   {
+    id: 'PR001',
     name: 'ادو پرفیوم زنانه دزیره رانسه',
     images: ['assets/images/Product01.jpeg', 'assets/images/Product02.jpeg'],
     details: [
@@ -45,6 +46,7 @@ export const products = [
     ],
   },
   {
+    id: 'PR002',
     name: 'ادو پرفیوم زنانه دزیره رانسه',
     images: ['assets/images/Product01.jpeg', 'assets/images/Product02.jpeg'],
     details: [
@@ -61,6 +63,7 @@ export const products = [
     ],
   },
   {
+    id: 'PR003',
     name: 'ادو پرفیوم زنانه دزیره رانسه',
     images: ['assets/images/Product01.jpeg', 'assets/images/Product02.jpeg'],
     details: [
@@ -77,6 +80,7 @@ export const products = [
     ],
   },
   {
+    id: 'PR004',
     name: 'ادو پرفیوم زنانه دزیره رانسه',
     images: ['assets/images/Product01.jpeg', 'assets/images/Product02.jpeg'],
     details: [
@@ -93,6 +97,7 @@ export const products = [
     ],
   },
   {
+    id: 'PR005',
     name: 'ادو پرفیوم زنانه دزیره رانسه',
     images: ['assets/images/Product01.jpeg', 'assets/images/Product02.jpeg'],
     details: [
@@ -109,6 +114,7 @@ export const products = [
     ],
   },
   {
+    id: 'PR006',
     name: 'ادو پرفیوم زنانه دزیره رانسه',
     images: ['assets/images/Product01.jpeg', 'assets/images/Product02.jpeg'],
     details: [
@@ -125,6 +131,7 @@ export const products = [
     ],
   },
   {
+    id: 'PR007',
     name: 'ادو پرفیوم زنانه دزیره رانسه',
     images: ['assets/images/Product01.jpeg', 'assets/images/Product02.jpeg'],
     details: [
@@ -141,6 +148,7 @@ export const products = [
     ],
   },
   {
+    id: 'PR008',
     name: 'ادو پرفیوم زنانه دزیره رانسه',
     images: ['assets/images/Product01.jpeg', 'assets/images/Product02.jpeg'],
     details: [

@@ -3,8 +3,19 @@ import { AiOutlineUser, AiOutlineSearch, AiOutlineHeart } from 'react-icons/ai';
 import { LiaShoppingBagSolid } from 'react-icons/lia';
 import { BiShuffle } from 'react-icons/bi';
 import Button from '../components/Button';
+import useCart from './useCart';
+import { useEffect, useState } from 'react';
 
 export const useMenu = (options: UseMenuOptions) => {
+  const [state] = useCart();
+  const [count, setCount] = useState(0);
+  useEffect(() => {
+    const totalcount = state.reduce(
+      (acc: number, item: CartItemType) => acc + item.count,
+      0
+    );
+    setCount(totalcount);
+  }, [state]);
   const menuItems: MenuItem[] = [
     {
       element: (
@@ -106,7 +117,12 @@ export const useMenu = (options: UseMenuOptions) => {
     {
       element: (
         <Button onClick={options.handleOpenCart}>
-          <LiaShoppingBagSolid size={24} className=" hover:text-[#5F754D]" />
+          <div className="relative">
+            <LiaShoppingBagSolid size={24} className=" hover:text-[#5F754D]" />
+            <span className="px-1 rounded-full text-white text-[8px] absolute top-0 bg-[#5F754D]">
+              {count}
+            </span>
+          </div>
         </Button>
       ),
     },
