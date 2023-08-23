@@ -4,7 +4,7 @@ import { BsArrowLeftCircle, BsArrowRightCircle } from 'react-icons/bs';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import ProductCard from './ProductCard';
 
-const swiperParams = {
+export const swiperParams = {
   slidesPerView: 1,
   spaceBetween: 10,
   // using "ratio" endpoints
@@ -27,7 +27,7 @@ const swiperParams = {
   },
 };
 
-const products = [
+export const products = [
   {
     name: 'ادو پرفیوم زنانه دزیره رانسه',
     images: ['assets/images/Product01.jpeg', 'assets/images/Product02.jpeg'],
@@ -182,7 +182,7 @@ const ProductSection = () => {
           ref={newestRef}
           {...swiperParams}
           observer={true}
-          className="mx-10"
+          className=""
           onSlideChange={() => console.log('slide change')}
           onSwiper={(swiper) => console.log(swiper)}
         >
