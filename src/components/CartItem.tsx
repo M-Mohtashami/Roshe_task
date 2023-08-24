@@ -7,7 +7,7 @@ type PropsType = {
   item: CartItemType;
 };
 const CartItem = ({ item }: PropsType) => {
-  const [dispach] = useCart();
+  const [state, dispach] = useCart();
   const deleteItem = () => {
     dispach({ type: 'remove from cart', payload: item });
   };
