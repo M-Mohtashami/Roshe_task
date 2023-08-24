@@ -40,7 +40,7 @@ const reducer = (state: CartItemType[], action: ActionType) => {
   }
 };
 
-export const CartContext = createContext<CartItemType[]>(initialState);
+export const CartContext = createContext<CartContextType | null>(null);
 
 export default function CartProvider({ children }: { children: ReactNode }) {
   const [state, dispach] = useReducer(reducer, initialState);

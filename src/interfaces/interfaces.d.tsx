@@ -40,3 +40,8 @@ type ActionType = {
   type: 'add to cart' | 'remove from cart' | 'update cart';
   payload: CartItemType;
 };
+
+type CartContextType = {
+  state: CartItemType[];
+  dispach: (value: ActionType) => void;
+};

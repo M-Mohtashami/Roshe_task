@@ -7,7 +7,7 @@ import useCart from './useCart';
 import { useEffect, useState } from 'react';
 
 export const useMenu = (options: UseMenuOptions) => {
-  const [state] = useCart();
+  const { state } = useCart();
   const [count, setCount] = useState(0);
   useEffect(() => {
     const totalcount = state.reduce(

@@ -1,4 +1,3 @@
-import React from 'react';
 import Button from './Button';
 import { AiOutlineClose } from 'react-icons/ai';
 import useCart from '../hooks/useCart';
@@ -7,7 +6,7 @@ type PropsType = {
   item: CartItemType;
 };
 const CartItem = ({ item }: PropsType) => {
-  const [state, dispach] = useCart();
+  const { dispach } = useCart();
   const deleteItem = () => {
     dispach({ type: 'remove from cart', payload: item });
   };

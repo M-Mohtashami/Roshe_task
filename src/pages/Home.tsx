@@ -1,4 +1,3 @@
-import React from 'react';
 import MainSlider from '../components/MainSlider';
 import CategoriesSection from '../components/CategoriesSection';
 import ProductSection from '../components/ProductSection';

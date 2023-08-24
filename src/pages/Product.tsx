@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import React, { MutableRefObject, useCallback, useRef, useState } from 'react';
+import { MutableRefObject, useCallback, useRef, useState } from 'react';
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { type Swiper as SwiperRef } from 'swiper';
@@ -26,7 +26,7 @@ import { useLoaderData, useParams } from 'react-router-dom';
 import useCart from '../hooks/useCart';
 import { useEffect } from 'react';
 
-export const productLoader = ({ params }) => {
+export const productLoader = ({ params }: { params: any }) => {
   const id = params.id;
   const product: ProductType = products.find((p) => p.id === id)!;
   return product;
@@ -34,7 +34,7 @@ export const productLoader = ({ params }) => {
 const Product = () => {
   const product = useLoaderData() as ProductType;
   const { id } = useParams();
-  const [state, dispach] = useCart();
+  const { state, dispach } = useCart();
   const [desc, setDesc] = useState(false);
   const [count, setCount] = useState(1);
   const [thumbsSwiper, setThumbsSwiper] = useState<SwiperRef>();

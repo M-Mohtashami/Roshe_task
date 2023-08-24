@@ -1,4 +1,3 @@
-import React from 'react';
 import { HiOutlineShare } from 'react-icons/hi';
 import { BiMessage } from 'react-icons/bi';
 import Button from './Button';

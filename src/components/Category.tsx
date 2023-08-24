@@ -1,5 +1,3 @@
-import React from 'react';
-
 type PropsType = {
   src: string;
   category: string;

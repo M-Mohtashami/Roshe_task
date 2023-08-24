@@ -10,7 +10,7 @@ import CartItem from './CartItem';
 const Header = () => {
   const [openCart, setOpenCart] = useState(false);
   const [openMobile, setOpenMobile] = useState(false);
-  const [state] = useCart();
+  const { state } = useCart();
   const handleOpenCart = () => {
     setOpenCart(true);
   };

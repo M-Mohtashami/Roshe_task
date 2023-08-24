@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import Button from './Button';
 import { AiOutlineHeart, AiOutlineClose } from 'react-icons/ai';
 import { BiShuffle } from 'react-icons/bi';
@@ -9,7 +9,7 @@ type PropsType = {
   product: ProductType;
 };
 const ProductCard = ({ product }: PropsType) => {
-  const [state, dispach] = useCart();
+  const { state, dispach } = useCart();
   console.log(state);
 
   const [price, setPrice] = useState<number>();

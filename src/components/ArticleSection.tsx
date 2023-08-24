@@ -1,5 +1,5 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
-import React, { MutableRefObject, useCallback, useRef } from 'react';
+import { MutableRefObject, useCallback, useRef } from 'react';
 import { BsArrowLeftCircle, BsArrowRightCircle } from 'react-icons/bs';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import ArticleCard from './ArticleCard';
