@@ -30,7 +30,7 @@ export const swiperParams = {
 export const products = [
   {
     id: 'PR001',
-    name: 'ادو پرفیوم زنانه دزیره رانسه',
+    name: '1 ادو پرفیوم زنانه دزیره رانسه',
     images: ['assets/images/Product01.jpeg', 'assets/images/Product02.jpeg'],
     details: [
       {
@@ -178,8 +178,11 @@ const ProductSection = () => {
     sliderRef.current.swiper.slideNext();
   }, []);
   return (
-    <div className="space-y-3 mt-32">
-      <div className="flex items-center gap-5 p-4">
+    <div className="relative space-y-3 mb-48">
+      <div className="w-full h-96 bg-[#35481E] flex items-start justify-center text-white text-6xl font-bold">
+        <h2 className="pt-20">{'تخفیف ها'}</h2>
+      </div>
+      <div className="absolute w-full top-48 flex items-center gap-5 p-4">
         <button
           onClick={() => handlePrev(newestRef)}
           className="hover:scale-125 hover:text-primary"

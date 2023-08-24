@@ -12,7 +12,9 @@ const Home = () => {
         <MainSlider />
       </div>
       <CategoriesSection />
-      <ProductSection />
+      <div className="w-full">
+        <ProductSection />
+      </div>
       <ArticleSection />
       <DiscountSection />
     </div>

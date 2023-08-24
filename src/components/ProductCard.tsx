@@ -30,11 +30,13 @@ const ProductCard = ({ product }: PropsType) => {
   return (
     <div className="relative max-w-[250px] bg-white flex flex-col items-center justify-between group">
       <div className="relative w-full h-60 overflow-hidden flex flex-col items-center ">
-        <img
-          className="aspect-square"
-          src={product.images[0]}
-          alt={product.name}
-        />
+        <a href={`/${product.id}`}>
+          <img
+            className="aspect-square"
+            src={product.images[0]}
+            alt={product.name}
+          />
+        </a>
         <div className="w-2/3 bg-white shadow-md flex items-center justify-center gap-3 p-2 opacity-0 transition duration-700 ease-in-out transform group-hover:-translate-y-[140%] group-hover:opacity-100">
           <Button onClick={() => setShowDetails(true)}>
             <BsCart2 size={24} className=" hover:text-[#5F754D]" />

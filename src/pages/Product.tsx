@@ -22,11 +22,19 @@ import { AiOutlineHeart } from 'react-icons/ai';
 import { MdContentCopy } from 'react-icons/md';
 import { products, swiperParams } from '../components/ProductSection';
 import ProductCard from '../components/ProductCard';
+import { useLoaderData, useParams } from 'react-router-dom';
+import useCart from '../hooks/useCart';
+import { useEffect } from 'react';
 
-type PropsType = {
-  product: ProductType;
+export const productLoader = ({ params }) => {
+  const id = params.id;
+  const product: ProductType = products.find((p) => p.id === id)!;
+  return product;
 };
-const Product = ({ product }: PropsType) => {
+const Product = () => {
+  const product = useLoaderData() as ProductType;
+  const { id } = useParams();
+  const [state, dispach] = useCart();
   const [desc, setDesc] = useState(false);
   const [count, setCount] = useState(1);
   const [thumbsSwiper, setThumbsSwiper] = useState<SwiperRef>();
@@ -48,7 +56,21 @@ const Product = ({ product }: PropsType) => {
   const handleDecrease = useCallback(() => {
     setCount((prev) => (prev > 1 ? prev - 1 : 1));
   }, []);
-
+  const updateCart = () => {
+    const cartItem = {
+      id: product.id,
+      name: product.name,
+      description: product.description,
+      images: product.images,
+      ...(quantity.find((quant) => quant.price === price) || quantity[0]),
+      count: count,
+    };
+    dispach({ type: 'update cart', payload: cartItem });
+  };
+  useEffect(() => {
+    const nc = state.find((item: CartItemType) => item.id === id);
+    nc && setCount(nc.count);
+  }, [state]);
   return (
     <div className="w-full p-8 flex flex-col items-center justify-between gap-12 bg-white">
       <div className="w-full flex flex-col md:flex-row items-start justify-start gap-24">
@@ -136,7 +158,7 @@ const Product = ({ product }: PropsType) => {
                 <BsDash size={20} />
               </Button>
             </div>
-            <Button>
+            <Button onClick={updateCart}>
               <div className="bg-[#5F754D] w-32 p-2 border rounded-e-full flex items-center justify-center text-white">
                 {'خرید'}
               </div>
